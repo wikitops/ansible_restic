@@ -1,0 +1,9 @@
+---
+
+- name: RESTIC AWS | Configure shell environment
+  template:
+    src: home/restic/aws_restic.env.j2
+    dest: /home/restic/.restic.env
+    owner: restic
+    group: restic
+    mode: 0400

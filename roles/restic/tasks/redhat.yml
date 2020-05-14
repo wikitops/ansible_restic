@@ -1,0 +1,9 @@
+---
+
+- name: RESTIC REDHAT | Add repository
+  yum_repository:
+    name: copr:copr.fedorainfracloud.org:copart:restic
+    description: Copr repo for restic owned by copart
+    baseurl: "{{ restic_yum_repo }}"
+    gpgcheck: yes
+    gpgkey: "{{ restic_gpg_key }}"

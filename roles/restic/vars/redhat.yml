@@ -1,0 +1,12 @@
+---
+
+###
+# REDHAT
+###
+
+# Package name
+restic_package_name: restic-{{ restic_version }}
+
+# RPM URL
+restic_yum_repo: https://download.copr.fedorainfracloud.org/results/copart/restic/epel-7-$basearch/
+restic_gpg_key: https://download.copr.fedorainfracloud.org/results/copart/restic/pubkey.gpg

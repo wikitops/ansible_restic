@@ -1,0 +1,16 @@
+---
+
+- name: RESTIC | Include OS-specific variables
+  include_vars: "{{ ansible_os_family | lower }}.yml"
+
+- name: RESTIC | Include OS-specific tasks
+  include_tasks: "{{ ansible_os_family | lower }}.yml"
+  when: ansible_os_family == "RedHat"
+
+- name: RESTIC | Install package
+  package:
+    name: "{{ restic_package_name }}"
+    state: present
+
+- name: RESTIC | Manage user
+  include_tasks: user.yml

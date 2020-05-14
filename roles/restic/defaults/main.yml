@@ -1,0 +1,22 @@
+---
+
+###
+# RESTIC
+###
+
+# Version
+restic_version: "0.9.6"
+
+# Password to encrypt files
+restic_password: CHANGE_ME_AND_ENCRYPT_ME
+
+###
+# AWS
+###
+
+# Access keys
+restic_aws_access_key: CHANGE_ME_AND_ENCRYPT_ME
+restic_aws_secret_key: CHANGE_ME_AND_ENCRYPT_ME
+
+# S3 bucket URL
+restic_repository: "s3:s3.amazonaws.com/CHANGE_ME"

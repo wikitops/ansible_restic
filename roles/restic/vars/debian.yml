@@ -1,0 +1,8 @@
+---
+
+###
+# DEBIAN
+###
+
+# Package name
+restic_package_name: restic={{ restic_version }}*

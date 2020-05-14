@@ -1,0 +1,14 @@
+---
+
+- name: RESTIC USER | Add group
+  group:
+    name: restic
+    state: present
+
+- name: RESTIC USER | Add user
+  user:
+    name: restic
+    group: restic
+    shell: /bin/bash
+    create_home: yes
+    state: present
