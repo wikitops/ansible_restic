@@ -12,3 +12,14 @@
     shell: /bin/bash
     create_home: yes
     state: present
+
+- name: RESTIC USER | Generate autocompletion file
+  command: restic generate --bash-completion /home/restic/.restic_completion.bash
+  args:
+    creates: /home/restic/.restic_completion.bash
+
+- name: RESTIC USER | Configure bashrc
+  lineinfile:
+    path: /home/restic/.bashrc
+    line: "source /home/restic/.restic_completion.bash"
+    state: present

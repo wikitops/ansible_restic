@@ -14,3 +14,6 @@
 
 - name: RESTIC | Manage user
   include_tasks: user.yml
+
+- name: RESTIC | Manage AWS environment
+  include_tasks: aws.yml
